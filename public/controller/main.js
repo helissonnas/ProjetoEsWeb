@@ -33,7 +33,7 @@ cliente = [{ nome: "Fulano",
 
 function clienteList() {
   for (obj of cliente) {
-    document.write("<p>Nome: "+ obj.nome +" Pontos: "+obj.pontos+" Bairro: "+obj.bairro+"</p>");
+    document.write('<a href="#'+ obj.nome +'" class="list-group-item"><h4 class="list-group-item-heading">'+ obj.nome +'</h4><p class="list-group-item-text"> Pontos: '+obj.pontos+' Bairro: '+obj.bairro+'</p></a>');
   }
 }
 
@@ -61,7 +61,7 @@ produto = [{ nome: "Celular",
 
 function produtoList() {
   for (obj of produto) {
-    document.write("<p>Nome: "+ obj.nome +"Preço :"+ obj.preco +" Pontos: "+obj.pontos+" Descriçao: "+obj.descricao+"</p>");
+    document.write('<a href="#'+ obj.nome +'" class="list-group-item"><h4 class="list-group-item-heading">'+ obj.nome +'</h4><p class="list-group-item-text"> Preço: '+obj.preco+' Descrição: '+obj.descricao+'</p></a>');
   }
 }
 
@@ -85,7 +85,7 @@ promocao = [{ nome: "Carnaval de preços baixos",
 
 function promocaoList() {
   for (obj of promocao) {
-    document.write("<p>Nome: "+ obj.nome +" Descriçao: "+obj.descricao+" Ativo? "+obj.valida+"</p>");
+    document.write('<a href="#'+ obj.nome +'" class="list-group-item"><h4 class="list-group-item-heading">'+ obj.nome +'</h4><p class="list-group-item-text"> Ativo: '+obj.valida+' Descrição: '+obj.descricao+'</p></a>');
   }
 }
 
@@ -113,7 +113,7 @@ servico = [{ nome: "Aplicar película",
 
 function servicoList() {
   for (obj of servico) {
-    document.write("<p>Nome: "+ obj.nome +" Preço : "+ obj.preco +" Pontos: "+obj.pontos+" Descriçao: "+obj.descricao+"</p>");
+    document.write('<a href="#'+ obj.nome +'" class="list-group-item"><h4 class="list-group-item-heading">'+ obj.nome +'</h4><p class="list-group-item-text"> Preço: '+obj.preco+' Pontos: '+obj.pontos+' Descrição: '+obj.descricao+'</p></a>');
   }
 }
 
@@ -132,4 +132,8 @@ function laco(tipo) {
     else if (tipo == "serviços") {
       servicoList();
     }
+}
+
+function showObj(id) {
+  document.write(id);
 }

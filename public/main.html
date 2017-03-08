@@ -47,37 +47,62 @@
             <button onclick="signout()" class="btn btn-danger"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Sair</button>
           </div>
         </div>
-
-        <div class="tab-content col-sm-offset-4">
-          <div id="clientes" class="tab-pane fade in active">
-            <h3>Clientes</h3>
-            <script>
-              laco("cliente");
-            </script>
+        <div class="row">
+          <div class="col-md-4">
+            <br>
           </div>
-          <div id="produtos" class="tab-pane fade">
-            <h3>Produtos</h3>
-            <script>
-              laco("produto");
-            </script>
+          <div class="tab-content col-md-3">
+            <div id="clientes" class="tab-pane fade in active">
+              <h3>Clientes</h3>
+              <div class="list-group nav-tabs">
+                <script>
+                  laco("cliente");
+                </script>
+              </div>
+            </div>
+            <div id="produtos" class="tab-pane fade">
+              <h3>Produtos</h3>
+              <script>
+                laco("produto");
+              </script>
+            </div>
+            <div id="promocoes" class="tab-pane fade">
+              <h3>Promoções</h3>
+              <script>
+                laco("promoções");
+              </script>
+            </div>
+            <div id="servicos" class="tab-pane fade">
+              <h3>Serviços</h3>
+              <script>
+                laco("serviços");
+              </script>
+            </div>
           </div>
-          <div id="promocoes" class="tab-pane fade">
-            <h3>Promoções</h3>
-            <script>
-              laco("promoções");
-            </script>
-          </div>
-          <div id="servicos" class="tab-pane fade">
-            <h3>Serviços</h3>
-            <script>
-              laco("serviços");
-            </script>
+          <div class="col-md-5">
+            <br><br><br>
+            <div class="row">
+              <text>
+                ++++++++++++++++++++++++++++++<br>
+                quando selecionar e apertar<br>
+                em editar as informações   <br>
+                devem aparecer em uma      <br>
+                caixa aqui.                <br>
+                ++++++++++++++++++++++++++++++<br>
+              </text>
+            </div>
+            <br>
+            <div class="row">
+              <button onclick="modObj(#id)" class="btn btn-primary btn-lg" type="button">Editar</button>
+              <button onclick="removeList(#id)" class="btn btn-danger btn-lg" type="button">Deletar</button>
+            </div>
           </div>
         </div>
-      </div>
-    <!-- rodape -->
-    <div class="footer" align="center">
-     <br> <p>Mister Smart &reg;</p>
+
+      <!-- rodape -->
+      <footer class="row" align="center">
+       <br> <p>Mister Smart &reg;</p>
+     </footer>
     </div>
   </body>
 </html>
