@@ -1,3 +1,4 @@
+
 window.onload = function() {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
@@ -133,7 +134,11 @@ function laco(tipo) {
       servicoList();
     }
 }
+let usuario = function (nome, sexo, email, senha, pontos) {
+    this.nome = nome;
+    this.sexo = sexo;
+    this.email = email;
+    this.senha = senha;
+    this.pontos = pontos;
+};
 
-function showObj(id) {
-  document.write(id);
-}
